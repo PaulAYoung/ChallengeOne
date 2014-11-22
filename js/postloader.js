@@ -126,11 +126,11 @@ function shortPost(post){
     
 
     out = out + '<div class="heifer-post-tags">' +
-            '<img src="/images/' + post.region[0].replace(" ", "") + '.png" data-type="region" data-image=' +
-            '"/images/' + post.region[0].replace(" ", "") + '.png" data-value="' + post.region[0] + '" class="heifer-tag-filter heifer-tag-image">';
+            '<img src="images/' + post.region[0].replace(" ", "") + '.png" data-type="region" data-image=' +
+            '"images/' + post.region[0].replace(" ", "") + '.png" data-value="' + post.region[0] + '" class="heifer-tag-filter heifer-tag-image">';
     
     post.tags.forEach(function(t){
-        out = out + '<img src="/images/' + t + '.png" data-value="' + t + '" data-type="tags" data-image="/images/' + t + '.png" class="heifer-tag-filter heifer-tag-image">'
+        out = out + '<img src="images/' + t + '.png" data-value="' + t + '" data-type="tags" data-image="images/' + t + '.png" class="heifer-tag-filter heifer-tag-image">'
     });
     out = out + '</div>';
 

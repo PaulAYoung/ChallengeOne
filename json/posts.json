@@ -9,7 +9,7 @@
         "type": ["text", "images"],
         "post":[
                 "This is text.",
-                {"type":"image", "url": "/media/juanito.jpg"},
+                {"type":"image", "url": "media/juanito.jpg"},
                 "this is more text"
             ]
     },
@@ -23,7 +23,7 @@
         "type": ["text", "images"],
         "post":[
                 "This is text.",
-                {"type":"image", "url": "/media/goat-kisses.jpg"},
+                {"type":"image", "url": "media/goat-kisses.jpg"},
                 "this is more text"
             ]
     },
@@ -37,7 +37,7 @@
         "type": ["text", "images"],
         "post":[
                 "This is text.",
-                {"type":"image", "url": "/media/roadside.jpg"},
+                {"type":"image", "url": "media/roadside.jpg"},
                 "this is more text"
             ]
     },
@@ -51,7 +51,7 @@
         "type": ["text", "images"],
         "post":[
                 "This is text.",
-                {"type":"image", "url": "/media/hi-there.jpg"},
+                {"type":"image", "url": "media/hi-there.jpg"},
                 "this is more text"
             ]
     },
@@ -65,7 +65,7 @@
         "type": ["text", "images"],
         "post":[
                 "This is text.",
-                {"type":"image", "url": "/media/hi-there.jpg"},
+                {"type":"image", "url": "media/hi-there.jpg"},
                 "this is more text"
             ]
     },
@@ -79,7 +79,7 @@
         "type": ["text", "images"],
         "post":[
                 "This is text.",
-                {"type":"image", "url": "/media/hi-there.jpg"},
+                {"type":"image", "url": "media/hi-there.jpg"},
                 "this is more text"
             ]
     },
@@ -93,7 +93,7 @@
         "type": ["text", "images"],
         "post":[
                 "This is text.",
-                {"type":"image", "url": "/media/hi-there.jpg"},
+                {"type":"image", "url": "media/hi-there.jpg"},
                 "this is more text"
             ]
     },
@@ -107,7 +107,7 @@
         "type": ["text", "images"],
         "post":[
                 "This is text.",
-                {"type":"image", "url": "/media/hi-there.jpg"},
+                {"type":"image", "url": "media/hi-there.jpg"},
                 "this is more text"
             ]
     }
