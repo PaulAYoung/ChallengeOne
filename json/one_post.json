@@ -1,0 +1,16 @@
+[
+    {
+        "title": "blah",
+        "description": "blah blah",
+        "user": "John",
+        "timestamp": "1/1/2014",
+        "region": ["Asia", "China"],
+        "tags":["chicken", "farming"],
+        "type": ["text", "images"],
+        "post":[
+                "This is text.",
+                {"type":"image", "url": "/media/goat-kisses.jpg"},
+                "this is more text"
+            ]
+    }
+]

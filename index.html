@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="author" content="paul" >
 
     <title>Heifer International Tinder</title>
 
@@ -459,16 +459,8 @@
                     <h1 class="page-header">News Feed</h1>
                 </div>
                 <!-- /.col-lg-12 -->
-            </div>
-            <div class = "row">
-
-
-
-            </div>
-            <div class="row">
-                
-                
-            </div>
+            	<div id="postFeed">
+            	</div>
             <!-- /.row -->
         </div>
         <!-- /#page-wrapper -->
@@ -492,7 +484,13 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="js/sb-admin-2.js"></script>
-
+    <script src="js/postloader.js"></script>
+	 <script>
+	     $(document).ready(function() {
+	 			postsUrl = "/json/posts.json";
+	  			posts = new postLoader(postsUrl, "#postFeed");       
+	      });
+	 </script>
 </body>
 
 </html>
