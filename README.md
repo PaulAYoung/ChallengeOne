@@ -7,4 +7,4 @@
 
 To view project, run an http server at the root of the directory.
 
-The site is also temporarily up [here](people.ischool.berkeley.edu/~pyoung/hackathon/).
+The site is also temporarily up [here](http://people.ischool.berkeley.edu/~pyoung/hackathon/).
