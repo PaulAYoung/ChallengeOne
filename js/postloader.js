@@ -35,8 +35,8 @@ function formatPost(post){
 }
 
 function shortPost(post){
-    var out = '<div class="heifer-post">' +
-            '<div class="heifer-post-title">' +
+    var out = '<div class="heifer-post" style="text-align:center; border-bottom: 1px solid #dbdbdb;padding-bottom:100px">' +
+            '<div class="heifer-post-title" style="padding-bottom:20px; font-size:40px; font-family: Copperplate / Copperplate Gothic Light, sans-serif;">' +
                 post.title +
             '</div>';
 
@@ -45,22 +45,25 @@ function shortPost(post){
                 post.post[idx].type === "image"){
                 out = out +
                     '<div class="heifer-post-image">' +
-                        '<img src="' + post.post[idx].url + '">';
+                        '<img src="' + post.post[idx].url + '" style="height:300px">';
                     '</div>';
                     break;
             }
     }
-    out = out + '<div class="heifer-post-desc">' +
+    
+
+    out = out + '<div class="heifer-post-tags" style="padding-top:20px;padding-bottom:20px">';
+    post.tags.forEach(function(t){
+        out = out + '<img src="/images/' + t + '.png" class="heifer-post-tag-image" style="height:50px">'
+    });
+    out = out + '</div>';
+
+
+    out = out + '<div class="heifer-post-desc" style="font-size:25px">' +
                 post.description +
             '</div>';
 
-    out = out + '<div class="heifer-post-tags">';
-    post.tags.forEach(function(t){
-        out = out + '<img src="/images/' + t + '.png" class="heifer-post-tag-image">'
-    });
-
-    out = out + '</div>' +
-        '</div>';
+    out = out + '</div>';
 
     return out;
 }
