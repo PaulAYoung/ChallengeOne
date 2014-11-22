@@ -1,7 +1,12 @@
 function postLoader(url, node){
     this.url = url;
+    this.postDiv = $(node);
+    this.postnode = this.postDiv.find(".heifer-post-feed");
+    this.filterNode = this.postDiv.find(".heifer-filters-list");
+    this.postDiv.find(".heifer-filters-clear").click($.proxy(this.clearFilters, this));
+    this.filters = [];
     this.getPosts();
-    this.postnode = $(node);
+    
 }
 
 postLoader.prototype.getPosts = function(args){
@@ -11,13 +16,22 @@ postLoader.prototype.getPosts = function(args){
     }, this));
 };
 
+postLoader.prototype.clearFilters = function(){
+    this.filters = [];
+    this.filterRefresh();
+    this.loadPosts(this.posts);
+}
+
 postLoader.prototype.onLoad = function(){
     this.loadPosts(this.posts);
 };
 
 postLoader.prototype.loadPosts = function(posts){
     posts.forEach($.proxy(function(d){
-            this.postnode.append(shortPost(d));
+            var post = $(shortPost(d));
+            post.hide();
+            this.postnode.append(post);
+            post.slideDown();
         }, this)
     );
     $(".heifer-tag-filter").click($.proxy(this.tagClick, this));
@@ -27,24 +41,52 @@ postLoader.prototype.clearPosts = function(){
     this.postnode.empty();
 };
 
-postLoader.prototype.filterPosts = function(filter){
-    var posts = [];
-    this.posts.forEach(function(p){
-        if (p.tags.indexOf(filter) >= 0 ||
-            p.region.indexOf(filter) >= 0){
-                posts.push(p);
-            }
+postLoader.prototype.filterPosts = function(){
+    var posts = this.posts.slice(0);
+    this.filters.forEach(function(filter){
+        var filtered = [];
+        posts.forEach(function(p){
+            if (p[filter.type].indexOf(filter.value) >= 0){
+                    filtered.push(p);
+                }
+            posts = filtered;
+        });
     });
     this.clearPosts();
     this.loadPosts(posts);
     return posts;
 };
 
+postLoader.prototype.filterRefresh = function(){
+    this.filterNode.children().slideUp();
+    this.filterNode.empty();
+    this.filters.forEach($.proxy(function(f){
+        if (typeof f.image !== 'undefined'){
+            var filter = $('<img class="heifer-tag-image" src="' + f.image + '">');
+        }else{
+            var filter = $('<span class="heifer-tag-text">' + f.value + "</span>");
+        }
+        filter.hide();
+        this.filterNode.append(filter);
+        filter.slideDown();
+    }, this));
+}
+
 postLoader.prototype.tagClick = function(e){
-    var tag = e.target.dataset.tag;
-    console.log(tag);
-    this.filterPosts(tag);
+    e.preventDefault();
+    var tag = e.target.dataset;
+    this.filterAdd(tag);
+    this.filterRefresh();
+    this.filterPosts();
 };
+
+postLoader.prototype.filterAdd = function(filter){
+    console.log(filter);
+    var filters = this.filters.map(function (f){return f.value + f.type;});
+    if (filters.indexOf(filter.value + filter.type)<0){
+        this.filters.push(filter);
+    }
+}
 
 function formatPost(post){
     // takes a post and outputs a nice view of it. 
@@ -62,8 +104,8 @@ function formatPost(post){
 }
 
 function shortPost(post){
-    var out = '<div class="heifer-post" style="text-align:center; border-bottom: 1px solid #dbdbdb;padding-bottom:100px">' +
-            '<div class="heifer-post-title" style="padding-bottom:20px; font-size:40px; font-family: Copperplate / Copperplate Gothic Light, sans-serif;">' +
+    var out = '<div class="heifer-post">' +
+            '<div class="heifer-post-title">' +
                 post.title +
             '</div>';
 
@@ -72,26 +114,29 @@ function shortPost(post){
                 post.post[idx].type === "image"){
                 out = out +
                     '<div class="heifer-post-image">' +
-                        '<img src="' + post.post[idx].url + '" style="height:300px">';
+                        '<img class="heifer-post-image" src="' + post.post[idx].url + '">' +
                     '</div>';
                     break;
             }
     }
     
 
-    out = out + '<div class="heifer-post-tags" style="padding-top:20px;padding-bottom:20px">';
+    out = out + '<div class="heifer-post-tags">' +
+            '<img src="/images/' + post.region[0].replace(" ", "") + '.png" data-type="region" data-image=' +
+            '"/images/' + post.region[0].replace(" ", "") + '.png" data-value="' + post.region[0] + '" class="heifer-tag-filter heifer-tag-image">';
+    
     post.tags.forEach(function(t){
-    out = out + '<img src="/images/' + t + '.png" data-tag="' + t + '" class="heifer-tag-filter heifer-post-tag-image" style="height:50px">'
+        out = out + '<img src="/images/' + t + '.png" data-value="' + t + '" data-type="tags" data-image="/images/' + t + '.png" class="heifer-tag-filter heifer-tag-image">'
     });
     out = out + '</div>';
 
 
-    out = out + '<div class="heifer-post-desc" style="font-size:25px">' +
+    out = out + '<div class="heifer-post-desc">' +
                 post.description +
             '</div>';
 
-    out = out + '<div class = "heifer-comments" style="text-align:center;padding-top:20px;">'
-    out = out + '<input type="text" class="form-control" placeholder="Comments..." style="display:inline-block;width:600px;height:150px">';
+    out = out + '<div class = "heifer-comments">'
+    out = out + '<input type="text" class="form-control heifer-comment-form" placeholder="Comments...">';
     out = out + '</div>'
 
     out = out + '</div>';

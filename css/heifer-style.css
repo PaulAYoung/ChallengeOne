@@ -1,0 +1,38 @@
+.heifer-post{
+	text-align:center;
+	border-bottom: 1px solid;
+	padding: 10em 2em;
+}
+
+.heifer-post-tags{
+	padding-top:20px;
+	padding-bottom:20px;
+}
+.heifer-post-title{
+		padding-bottom:20px;
+		font-size:40px;
+		font-family: Copperplate / Copperplate Gothic Light, sans-serif;
+}
+
+.heifer-tag-image{
+	height:50px;
+}
+
+.heifer-post-desc{
+	font-size:25px;
+}
+
+.heifer-post-image{
+	height:300px;
+}
+
+.heifer-comments{
+	text-align:center;
+	padding-top:20px;
+}
+
+.heifer-comment-form{
+	display:inline-block;\
+	width:600px;
+	height:150px;
+}
