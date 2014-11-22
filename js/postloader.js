@@ -90,6 +90,10 @@ function shortPost(post){
                 post.description +
             '</div>';
 
+    out = out + '<div class = "heifer-comments" style="text-align:center;padding-top:20px;">'
+    out = out + '<input type="text" class="form-control" placeholder="Comments..." style="display:inline-block;width:600px;height:150px">';
+    out = out + '</div>'
+
     out = out + '</div>';
 
     return out;
