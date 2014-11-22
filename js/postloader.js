@@ -19,6 +19,7 @@ postLoader.prototype.getPosts = function(args){
 postLoader.prototype.clearFilters = function(){
     this.filters = [];
     this.filterRefresh();
+    this.filterNode.html("None");
     this.loadPosts(this.posts);
 }
 
@@ -82,6 +83,9 @@ postLoader.prototype.tagClick = function(e){
 
 postLoader.prototype.filterAdd = function(filter){
     console.log(filter);
+    if (typeof filter.type === 'undefined' || typeof filter.value === 'undefined'){
+        return;
+    }
     var filters = this.filters.map(function (f){return f.value + f.type;});
     if (filters.indexOf(filter.value + filter.type)<0){
         this.filters.push(filter);
@@ -135,9 +139,9 @@ function shortPost(post){
                 post.description +
             '</div>';
 
-    out = out + '<div class = "heifer-comments">'
-    out = out + '<input type="text" class="form-control heifer-comment-form" placeholder="Comments...">';
-    out = out + '</div>'
+    out = out + '<div class = "heifer-comments">' +
+        '<textarea type="text" class="form-control heifer-comment-form" placeholder="Comments..."/>' +
+        '</div>';
 
     out = out + '</div>';
 

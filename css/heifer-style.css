@@ -1,38 +1,46 @@
 .heifer-post{
 	text-align:center;
-	border-bottom: 1px solid;
-	padding: 10em 2em;
+	border-bottom: 1px solid; 
+	padding: 2em 2em;
 }
 
 .heifer-post-tags{
-	padding-top:20px;
-	padding-bottom:20px;
+	padding-top:1em;
+	padding-bottom:1em;
 }
 .heifer-post-title{
-		padding-bottom:20px;
-		font-size:40px;
+		font-size:1em;
+		font-weight: bold;
 		font-family: Copperplate / Copperplate Gothic Light, sans-serif;
 }
 
+.heifer-tag-fig{
+	float: left;
+	display: inline;
+	margin: .25em .5em;
+	text-align: center;
+}
+
 .heifer-tag-image{
-	height:50px;
+	height:3em;
+	cursor: pointer;
 }
 
 .heifer-post-desc{
-	font-size:25px;
+	font-size:1em;
 }
 
 .heifer-post-image{
-	height:300px;
+	height:20em;
 }
 
 .heifer-comments{
 	text-align:center;
-	padding-top:20px;
+	padding-top:1em;
 }
 
 .heifer-comment-form{
 	display:inline-block;\
-	width:600px;
-	height:150px;
+	width:80%;
+	height:10em;
 }

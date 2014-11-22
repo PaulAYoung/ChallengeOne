@@ -1,6 +1,6 @@
 [
     {
-        "title": "Juanito in Guatemala",
+        "title": "Juanito's house in Guatemala: home building tips",
         "description": "The Sharing and Caring cornerstone helped Juanito's family accquire two cows that allowed them to add windows to their home and buy a bed for Juanito. Read about how they weather-proofed their adobe home.",
         "user": "John",
         "timestamp": "1/1/2014",
@@ -14,8 +14,8 @@
             ]
     },
     {
-        "title": "Leticia starts her own business",
-        "description": "Leticia employs 25 members of her community to process and sell the milk and cheese from her goats. She also teaches her employees how to raise and care for the goats so that they can trade them for other animals.",
+        "title": "Leticia's business is Goats: goat feed recipe",
+        "description": "Leticia employs 25 members of her community to process and sell the milk and cheese from her goats. She also teaches her employees how to raise and care for the goats so that they can trade them for other livestock. Watch a video showing her make her recipe for corn meal goat feed.",
         "user": "John",
         "timestamp": "1/1/2014",
         "region": ["North America", "Guatemala"],
@@ -28,8 +28,8 @@
             ]
     },
     {
-        "title": "Preserving Maya Biosphere Reserve",
-        "description": "Mountain colonization has destroyed the water-collecting functions of highland forests, leaving lowlands and cities at risk of losing essential water resources. Field staff in the region are documenting best practices for farm households and land use outcomes in this emergent agricultural frontier",
+        "title": "Preserving Maya Biosphere Reserve: Farming/land use data",
+        "description": "Mountain colonization has destroyed the water-collecting functions of highland forests, leaving lowlands and cities at risk of losing water resources. Field staff in the region are documenting best practices for farm households and land use outcomes in this emergent agricultural frontier, read the report from Alice who has been working at Heifer's office in Guatamala for three years.",
         "user": "John",
         "timestamp": "1/1/2014",
         "region": ["North America", "Guatemala"],
@@ -42,11 +42,67 @@
             ]
     },
     {
-        "title": "The gift of Family",
-        "description": "The Passing on the Gift cornerstone helped the Mendoza family stay together. After the loss of their mother and father to tuberculosis, the oldest of the six children were able to nuture five chicks into five egg laying hens that gave them enough money to keep all the siblings together.",
+        "title": "The gift of Family: The Mendoza children build an egg business",
+        "description": "The Passing on the Gift cornerstone helped the Mendoza family stay together. After the loss of their mother and father to tuberculosis, the oldest of the six children were able to nuture five chicks into five egg laying hens that gave them enough money to keep all the siblings together. Listen to the audio of them tell their story. ",
         "user": "John",
         "timestamp": "1/1/2014",
         "region": ["North America", "Guatemala"],
+        "tags":["needs_justice", "passing_gift"],
+        "type": ["text", "images"],
+        "post":[
+                "This is text.",
+                {"type":"image", "url": "/media/hi-there.jpg"},
+                "this is more text"
+            ]
+    },
+{
+        "title": "Joel's Rabbit Farm: Animal Healthcare",
+        "description": "Joel and his father have a successful rabbit farm in the rural area of outside of the capital city of Garoua. They have become famous for their rabbit's beautiful coats. Listen to audio of them sharing the best way to keep rabbits from getting sick.",
+        "user": "John",
+        "timestamp": "1/1/2014",
+        "region": ["Africa", "Cameroon"],
+        "tags":["needs_justice", "passing_gift"],
+        "type": ["text", "images"],
+        "post":[
+                "This is text.",
+                {"type":"image", "url": "/media/hi-there.jpg"},
+                "this is more text"
+            ]
+    },
+    {
+        "title": "Donkey delivery service",
+        "description": "Fatima and her brothers decided to use the two donkeys they accquired through Heifer's program in Cameroon to transport deliveries to and from their village to the big city of Yaounde. They take turns making deliveries and going to school so that they can support their extended family but also attend school a few times a week. See the pictures of them and their beloved delivery donkeys.",
+        "user": "John",
+        "timestamp": "1/1/2014",
+        "region": ["Africa", "Cameroon"],
+        "tags":["needs_justice", "passing_gift"],
+        "type": ["text", "images"],
+        "post":[
+                "This is text.",
+                {"type":"image", "url": "/media/hi-there.jpg"},
+                "this is more text"
+            ]
+    },
+    {
+        "title": "Bee Keeping in Manila: How to make candles from bee's wax",
+        "description": "Ram preferred bee keeping to farming and worked with Heifer's field staff in Manila to accquire five bee boxes. Now Ram supplies several villages in his region with different bee products such as wax, honey and royal jelly. He organized several family members to take up processing the bee's wax for candles and has recorded a video of the candle making process that can be replicated any where in the world!",
+        "user": "John",
+        "timestamp": "1/1/2014",
+        "region": ["Asia", "Philippines"],
+        "tags":["needs_justice", "passing_gift"],
+        "type": ["text", "images"],
+        "post":[
+                "This is text.",
+                {"type":"image", "url": "/media/hi-there.jpg"},
+                "this is more text"
+            ]
+    },
+    {
+        "title": "Fish Farming in Cambodia",
+        "description": "Most families in Cambodia are rice farmers but the elders in the Koh Svay village saw that their families needed to diversify their skills and diets. With just three schools of fish fingerlings, the village saw a dramatic improvement in the health of the community in just one year. Michael, the Heifer field staff in the region, recorded the decrease in infant/child deaths over a five year period. Read the full report here.",
+        "user": "John",
+        "timestamp": "1/1/2014",
+        "region": ["Asia", "Cambodia"],
         "tags":["needs_justice", "passing_gift"],
         "type": ["text", "images"],
         "post":[
