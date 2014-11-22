@@ -55,7 +55,6 @@ postLoader.prototype.filterPosts = function(){
     });
     this.clearPosts();
     this.loadPosts(posts);
-    return posts;
 };
 
 postLoader.prototype.filterRefresh = function(){
@@ -63,14 +62,16 @@ postLoader.prototype.filterRefresh = function(){
     this.filterNode.empty();
     this.filters.forEach($.proxy(function(f){
         if (typeof f.image !== 'undefined'){
-            var filter = $('<img class="heifer-tag-image" src="' + f.image + '">');
+            var filter = $('<img class="heifer-tag-image heifer-filter" src="' + f.image + '" data-value="' + f.value + '">');
         }else{
-            var filter = $('<span class="heifer-tag-text">' + f.value + "</span>");
+            var filter = $('<span class="heifer-tag-text heifer-filter" data-value="' + f.value + '">' + f.value + "</span>");
         }
         filter.hide();
         this.filterNode.append(filter);
         filter.slideDown();
     }, this));
+
+    this.filterNode.find(".heifer-filter").click($.proxy(this.filterClick, this));
 }
 
 postLoader.prototype.tagClick = function(e){
@@ -78,6 +79,17 @@ postLoader.prototype.tagClick = function(e){
     var tag = e.target.dataset;
     this.filterAdd(tag);
     this.filterRefresh();
+    this.filterPosts();
+};
+
+postLoader.prototype.filterClick = function(e){
+    var filter = e.target.dataset.value;
+    var new_filters = [];
+    $(e.target).slideUp().remove()
+    this.filters = this.filters.map(function(f){
+        if (f.value !== filter){new_filters.push(f)}
+    });
+    this.filters = new_filters;
     this.filterPosts();
 };
 
