@@ -12,11 +12,37 @@ postLoader.prototype.getPosts = function(args){
 };
 
 postLoader.prototype.onLoad = function(){
-    console.log("posts loaded");
-    this.posts.forEach($.proxy(function(d){
+    this.loadPosts(this.posts);
+};
+
+postLoader.prototype.loadPosts = function(posts){
+    posts.forEach($.proxy(function(d){
             this.postnode.append(shortPost(d));
         }, this)
     );
+    $(".heifer-tag-filter").click($.proxy(this.tagClick, this));
+};
+
+postLoader.prototype.clearPosts = function(){
+    this.postnode.empty();
+};
+
+postLoader.prototype.filterPosts = function(filter){
+    var posts = [];
+    this.posts.forEach(function(p){
+        if (p.tags.indexOf(filter) >= 0 ||
+            p.region.indexOf(filter) >= 0){
+                posts.push(p);
+            }
+    });
+    this.clearPosts();
+    this.loadPosts(posts);
+    return posts;
+};
+
+postLoader.prototype.tagClick = function(e){
+    var tag = e.target.dataset.tag;
+    this.filterPosts(tag);
 };
 
 function formatPost(post){
@@ -56,7 +82,7 @@ function shortPost(post){
 
     out = out + '<div class="heifer-post-tags">';
     post.tags.forEach(function(t){
-        out = out + '<img src="/images/' + t + '.png" class="heifer-post-tag-image">'
+        out = out + '<img src="/images/' + t + '.png" data-tag="' + t + '"class="heifer-post-tag-image heifer-tag-filter">'
     });
 
     out = out + '</div>' +
