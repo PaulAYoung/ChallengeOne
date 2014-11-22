@@ -5,7 +5,7 @@
         "user": "John",
         "timestamp": "1/1/2014",
         "region": ["Asia", "China"],
-        "tags":["chicken", "farming"],
+        "tags":["sharing", "families"],
         "type": ["text", "images"],
         "post":[
                 "This is text.",
@@ -19,7 +19,7 @@
         "user": "John",
         "timestamp": "1/1/2014",
         "region": ["Asia", "China"],
-        "tags":["chicken", "farming"],
+        "tags":["income", "cow"],
         "type": ["text", "images"],
         "post":[
                 "This is text.",
@@ -33,7 +33,7 @@
         "user": "John",
         "timestamp": "1/1/2014",
         "region": ["Asia", "China"],
-        "tags":["chicken", "farming"],
+        "tags":["sustainability", "spirituality"],
         "type": ["text", "images"],
         "post":[
                 "This is text.",
@@ -47,7 +47,7 @@
         "user": "John",
         "timestamp": "1/1/2014",
         "region": ["Asia", "China"],
-        "tags":["chicken", "farming"],
+        "tags":["needs_justice", "passing_gift"],
         "type": ["text", "images"],
         "post":[
                 "This is text.",

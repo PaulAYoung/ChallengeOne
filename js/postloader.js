@@ -1,7 +1,6 @@
 function postLoader(url, node){
     this.url = url;
     this.getPosts();
-    this.posts=[];
     this.postnode = $(node);
 }
 
@@ -53,7 +52,14 @@ function shortPost(post){
     }
     out = out + '<div class="heifer-post-desc">' +
                 post.description +
-            '</div>'+
+            '</div>';
+
+    out = out + '<div class="heifer-post-tags">';
+    post.tags.forEach(function(t){
+        out = out + '<img src="/images/' + t + '.png" class="heifer-post-tag-image">'
+    });
+
+    out = out + '</div>' +
         '</div>';
 
     return out;
