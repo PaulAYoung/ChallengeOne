@@ -1,10 +1,10 @@
 [
     {
-        "title": "title",
-        "description": "description",
+        "title": "Juanito in Guatemala",
+        "description": "The Sharing and Caring cornerstone helped Juanito's family accquire two cows that allowed them to add windows to their home and buy a bed for Juanito. Read about how they weather-proofed their adobe home.",
         "user": "John",
         "timestamp": "1/1/2014",
-        "region": ["Asia", "China"],
+        "region": ["North America", "Guatemala"],
         "tags":["sharing", "families"],
         "type": ["text", "images"],
         "post":[
@@ -14,11 +14,11 @@
             ]
     },
     {
-        "title": "title",
-        "description": "description",
+        "title": "Leticia starts her own business",
+        "description": "Leticia employs 25 members of her community to process and sell the milk and cheese from her goats. She also teaches her employees how to raise and care for the goats so that they can trade them for other animals.",
         "user": "John",
         "timestamp": "1/1/2014",
-        "region": ["Asia", "China"],
+        "region": ["North America", "Guatemala"],
         "tags":["income", "cow"],
         "type": ["text", "images"],
         "post":[
@@ -28,11 +28,11 @@
             ]
     },
     {
-        "title": "title",
-        "description": "description",
+        "title": "Preserving Maya Biosphere Reserve",
+        "description": "Mountain colonization has destroyed the water-collecting functions of highland forests, leaving lowlands and cities at risk of losing essential water resources. Field staff in the region are documenting best practices for farm households and land use outcomes in this emergent agricultural frontier",
         "user": "John",
         "timestamp": "1/1/2014",
-        "region": ["Asia", "China"],
+        "region": ["North America", "Guatemala"],
         "tags":["sustainability", "spirituality"],
         "type": ["text", "images"],
         "post":[
@@ -42,11 +42,11 @@
             ]
     },
     {
-        "title": "title",
-        "description": "description",
+        "title": "The gift of Family",
+        "description": "The Passing on the Gift cornerstone helped the Mendoza family stay together. After the loss of their mother and father to tuberculosis, the oldest of the six children were able to nuture five chicks into five egg laying hens that gave them enough money to keep all the siblings together.",
         "user": "John",
         "timestamp": "1/1/2014",
-        "region": ["Asia", "China"],
+        "region": ["North America", "Guatemala"],
         "tags":["needs_justice", "passing_gift"],
         "type": ["text", "images"],
         "post":[
